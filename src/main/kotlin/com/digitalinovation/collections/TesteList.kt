@@ -24,7 +24,7 @@ fun main() {
     println( SEPARADOR )
 
     funcionarios
-        .sortedBy { it.tipoContratacao }
+        .groupBy { it.tipoContratacao }
         .forEach { println( it ) }
 }
 
