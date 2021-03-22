@@ -12,4 +12,13 @@ fun main() {
     repositorio.create( maria.nome, maria )
 
     println( repositorio.findById( maria.nome ) )
+
+    println( "$SEPARADOR imprime todos os itens" )
+
+    repositorio.findAll().forEach{ println( it ) }
+
+    println( "$SEPARADOR remove a Maria" )
+
+    repositorio.remove( maria.nome )
+    repositorio.findAll().forEach{ println( it ) }
 }
